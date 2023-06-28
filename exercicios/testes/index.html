@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+            font-size: 18px;
+        }
+
+        section {
+            display: block;
+            margin: auto;
+            width: 500px;
+            height: 200px;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.296);
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+            
+        }
+
+        #res {
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de idade</h1>
+    <section>
+        <div>
+            <p>Em que ano você nasceu:
+                <input type="number" name="txtano" id="txtano"> =
+                <input type="button" value="Calcular" onclick="calcular()">
+            </p>
+        </div>
+
+        <div id="res">
+            Sua idade vai aparecer aqui...
+        </div>
+
+    </section>
+
+
+
+    <script>
+        function calcular() {
+            var data = new Date()
+            var ano = data.getFullYear()
+            var fano = document.getElementById('txtano')
+            var res = document.getElementById('res')
+            if (fano.value.length == 0 || fano.value > ano) {
+                window.alert(`Verifique os dados e tente novamente`)
+            } else {
+                var idade = ano -Number(fano.value)
+                res.innerHTML = `Você tem ${idade} anos`
+            }
+        }
+    </script>
+</body>
+</html>

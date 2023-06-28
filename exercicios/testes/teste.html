@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hora do dia</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-color: rgb(107, 107, 226);
+        }
+
+        section {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            text-align: center;
+            height: 274px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.292);
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <h1>Hora do dia</h1>
+
+    <section>
+        <div id="msg">
+
+        </div>
+
+        <div>
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/20932460-icone-de-relogio-para-seu-site-celular-apresentacao-e-design-de-logotipo-gratis-vetor.jpg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        function carregar(){
+            var msg = document.getElementById('msg')
+            var data = new Date()
+            var hora = data.getHours()
+            var min = data.getMinutes()
+            var dia = 'Bom dia!'
+            var tarde = 'Boa tarde!'
+            var noite = 'Boa noite!'
+            msg.innerHTML = (`Agora são ${hora}:${min} `)
+            if (hora >= 0 &&  hora < 12) {
+                msg.innerHTML = (`${dia} agora são ${hora}:${min}`)
+            } else if (hora >= 12 && hora < 18) {
+                msg.innerHTML = (`${tarde} agora são ${hora}:${min}`)
+            } else {
+                msg.innerHTML = (`${noite} agora são ${hora}:${min}`)
+            }
+        }
+    </script>
+</body>
+</html>
