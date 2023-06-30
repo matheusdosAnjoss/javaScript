@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+            
+        }
+
+        section {
+            width: 500px;
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+            height: 200px;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.347);
+        }
+
+        div {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <h1>Hora do dia</h1>
+
+    <section>
+        <div id="msg">
+           
+        </div>
+
+        <div id="res">
+
+        </div>
+    </section>
+
+
+
+    <script>
+        function carregar() {
+            var msg = document.getElementById('msg')
+            var res = document.getElementById('res')
+            var data = new Date()
+            var hora = data.getHours()
+            res.innerHTML = (`Agora são ${hora} horas!`)
+        }
+    </script>
+</body>
+</html>

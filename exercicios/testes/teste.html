@@ -20,6 +20,7 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.292);
+            
         }
 
         img {
@@ -62,7 +63,7 @@
             var noite = 'Boa noite!'
             msg.innerHTML = (`Agora são ${hora}:${min} `)
             if (hora >= 0 &&  hora < 12) {
-                msg.innerHTML = (`${dia} agora são ${hora}:${min}`)
+                msg.innerHTML = (`${dia} agora são ${hora}:${min}`)               
             } else if (hora >= 12 && hora < 18) {
                 msg.innerHTML = (`${tarde} agora são ${hora}:${min}`)
             } else {
