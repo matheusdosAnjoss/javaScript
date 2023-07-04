@@ -40,13 +40,14 @@
     <section>
         <div>
             Qual é seu nome:
-            <input type="text" name="inome" id="inome">
-            <input type="button" value="Verificar" onclick="verificar()">
+            <input type="" name="inome" id="inome"  placeholder="Digite seu nome">
+
+            <input type="button" value="Enviar" onclick="verificar()">
                 
         </div>
 
         <div id="res">
-
+            Seu nome vai aparecer aqui
         </div>
         
     </section>
@@ -55,8 +56,11 @@
     <script>
        function verificar(){
         var nome = document.getElementById('inome')
-        var res = document.getElementById('res')
-        document.write = (`Seu nome é ${nome}`)
+        console.log(nome)
+        //var txt = document.getElementById('inome.value')
+        //var res = document.getElementById('res')
+        
+        //res.innerHTML = (`Seu nome é ${txt}`)
        }
     </script>
 </body>

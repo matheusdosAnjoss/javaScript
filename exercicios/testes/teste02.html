@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+    
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+    header{
+        color: white;
+        text-align: center;
+    }
+
+    section {
+        background-color: white;
+        border-radius: 10px;
+        width: 500px;
+        margin: auto;
+        padding: 15px;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.234);
+    }
+
+    footer {
+        color: white;
+        text-align: center;
+        font-style: italic;
+        font-size: 21px;
+    }
+
+    #res {
+        padding-top: 15px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Teste de contar</h1>
+
+    <section>
+
+        <div>
+           <p>Inicio: <input type="number" name="txti" id="txti"></p>
+
+           <p>Fim: <input type="number" name="txtf" id="txtf"></p>
+           
+           <p>Passo: <input type="number" name="txtp" id="txtp"></p>
+           <input type="button" value="Calcular" onclick="calcular()">
+        </div>
+
+        <div id="res">
+            <p>Preparando Contagem...</p>
+        </div>
+
+    </section>
+
+    <script>
+        function calcular() {
+            var ini = document.getElementById('txti')
+            var fim = document.getElementById('txtf')
+            var pas = document.getElementById('txtp')
+            var res = document.getElementById('res')
+
+            if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
+                alert('[ERRO] Complete os dados')
+            } else {
+                res.innerHTML = ('Contando:')
+                var i = Number(ini.value)
+                var f = Number(fim.value)
+                var p = Number(pas.value)
+                
+                if (p <= 0) {
+                    alert('Passo ínvalido! Considerando passo 1')
+                    p = 1
+                }
+
+                if (i < f) {
+                    for (var c = i; c <= f; c += p)
+                    res.innerHTML += ` ${c} `
+                }
+            }
+        }
+    </script>
+</body>
+</html>
