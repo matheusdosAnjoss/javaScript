@@ -1,4 +1,4 @@
-let num = [5, 8, 2, 9, 3]
+/*let num = [5, 8, 2, 9, 3]
 
 num.push(1)
 num.sort()
@@ -11,4 +11,10 @@ if (pos == -1){
     console.log(`O valor não foi encontradoz`)
 } else {
     console.log(`O valor 8 esta na posição ${pos}`)
-}
+}*/
+
+let num = [9, 3, 7, 2, 1]
+num.sort()
+console.log(num)
+console.log(`O vetor tem ${num.length} posições`)
+console.log(`O terceiro valor do vetor e ${num[2]}`)
